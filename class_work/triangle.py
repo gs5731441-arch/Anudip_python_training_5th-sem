@@ -1,0 +1,21 @@
+# Program to check whether three sides form a triangle or not
+
+a = float(input("Enter side a: "))
+
+if a <= 0:
+    print("Invalid side a!")
+else:
+    b = float(input("Enter side b: "))
+
+    if b <= 0:
+        print("Invalid side b!")
+    else:
+        c = float(input("Enter side c: "))
+
+        if c <= 0:
+            print("Invalid side c!")
+        else:
+            if (a + b > c) and (a + c > b) and (b + c > a):
+                print("The sides form a Triangle.")
+            else:
+                print("The sides do NOT form a Triangle.")
