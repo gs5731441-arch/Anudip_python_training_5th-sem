@@ -1,39 +1,41 @@
-orders = [
-    ("Laptop", 55000),
-    ("Mouse", 800),
-    ("Keyboard", 1500),
-    ("Monitor", 12000),
-    ("Pen Drive", 600)
+employees = [
+    ("Rahul", 35000),
+    ("Priya", 55000),
+    ("Amit", 42000),
+    ("Neha", 65000)
 ]
 
-# Products costing more than 1000
-print("Products costing more than ₹1000:")
-for product, price in orders:
-    if price > 1000:
-        print(product, "-", price)
+# Employees earning above 50000
+print("Employees earning above ₹50,000:")
+for name, salary in employees:
+    if salary > 50000:
+        print(name, "-", salary)
 
-# Most expensive product
-max_product = orders[0][0]
-max_price = orders[0][1]
+# Highest-paid employee
+highest_name = employees[0][0]
+highest_salary = employees[0][1]
 
-for product, price in orders:
-    if price > max_price:
-        max_price = price
-        max_product = product
+for name, salary in employees:
+    if salary > highest_salary:
+        highest_salary = salary
+        highest_name = name
 
-print("\nMost Expensive Product:", max_product, "-", max_price)
+print("\nHighest Paid Employee:")
+print(highest_name, "-", highest_salary)
 
-# Total order value
-total = 0
-for product, price in orders:
-    total += price
+# Total salary expenditure
+total_salary = 0
 
-print("Total Order Value:", total)
+for name, salary in employees:
+    total_salary += salary
 
-# Count products below 1000
+print("\nTotal Salary Expenditure:", total_salary)
+
+# Count employees earning below 40000
 count = 0
-for product, price in orders:
-    if price < 1000:
+
+for name, salary in employees:
+    if salary < 40000:
         count += 1
 
-print("Products costing below ₹1000:", count)
+print("Employees earning below ₹40,000:", count)
